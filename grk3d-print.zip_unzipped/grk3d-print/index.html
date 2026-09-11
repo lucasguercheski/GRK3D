@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="GRK3D PRINT — impressão 3D, modelagem, criação e peças personalizadas em Araucária e região de Curitiba.">
+<title>GRK3D PRINT — Sua ideia. Nossa impressão.</title>
+<link rel="stylesheet" href="css/styles.css">
+<!-- SUPABASE SDK: descomente a linha abaixo quando for ativar a integração -->
+<script src="https://unpkg.com/@supabase/supabase-js@2" defer></script> 
+</head>
+<body>
+<body>
+<header>
+  <div class="container nav">
+    <a class="logo" href="#inicio">GRK<span>3D</span> PRINT</a>
+    <button class="menu" aria-label="Abrir menu" onclick="document.querySelector('nav').classList.toggle('open')">☰</button>
+    <nav>
+      <a href="#inicio">Início</a><a href="#sobre">Sobre</a>
+      <a href="#portfolio">Portfólio</a><a href="#personalizados">Personalizados</a><a href="#avaliacoes">Avaliações</a><a href="#contato">Contato</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="inicio">
+  <div class="container hero-grid">
+    <div class="reveal">
+      <div class="eyebrow">Impressão 3D · Modelagem · Personalização</div>
+      <h1>GRK3D<br><span style="color:var(--red)">PRINT</span></h1>
+      <h2>Sua ideia. Nossa impressão.</h2>
+      <p class="lead">Criamos peças em 3D que transformam ideias em algo que você pode tocar.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="#portfolio">VER PORTFÓLIO</a>
+        <a class="btn btn-outline" href="#contato">FALE CONOSCO</a>
+      </div>
+    </div>
+    <div class="hero-card reveal"><div class="mockup"><div><strong>✶ 3D</strong><small>IDEIAS GANHAM FORMA</small></div></div></div>
+  </div>
+</section>
+
+<section class="about" id="sobre">
+ <div class="container about-grid">
+  <div class="about-copy reveal">
+    <div class="kicker">Quem somos ✶</div><h2>Tecnologia com criatividade.</h2>
+    <p>A GRK3D PRINT atua com impressão 3D, modelagem, criação e personalização de peças, buscando transformar projetos e referências em objetos funcionais, decorativos ou personalizados.</p>
+    <p>À frente do projeto está Lucas Guercheski, que possui cerca de 3 anos e meio de estudos e experiência no campo da tecnologia e segue aprimorando seus conhecimentos em modelagem e impressão 3D.</p>
+    <p class="location">Araucária – PR ✶ Atendemos Araucária e região de Curitiba.</p>
+  </div>
+ </div>
+</section>
+
+<section id="portfolio">
+ <div class="container">
+  <div class="section-head reveal"><div><div class="kicker">Portfólio</div><h2>Nossos projetos.</h2></div><p>Criações pensadas para transformar referências, ideias e necessidades em objetos personalizados.</p></div>
+  <div class="cards">
+   <article class="card reveal"><div class="icon">01</div><h3>Chaveiros</h3><p>Peças personalizadas e criativas para diferentes ocasiões.</p></article>
+   <article class="card reveal"><div class="icon">02</div><h3>Miniaturas</h3><p>Modelos decorativos, colecionáveis e personalizados.</p></article>
+   <article class="card reveal"><div class="icon">03</div><h3>Itens religiosos</h3><p>Peças e objetos relacionados à temática religiosa.</p></article>
+   <article class="card reveal"><div class="icon">04</div><h3>Projetos personalizados</h3><p>Criações desenvolvidas a partir da ideia ou necessidade do cliente.</p></article>
+  </div>
+
+  <div class="palette reveal">
+    <div>
+      <div class="kicker">Paleta de projetos</div>
+      <h3>Quatro cores, muitas possibilidades.</h3>
+      <p>Azul, dourado, branco e preto formam uma base versátil. A combinação pode ser adaptada ou ampliada conforme cada peça e projeto.</p>
+    </div>
+    <div class="swatches">
+      <span class="swatch swatch-blue"><b>AZUL</b></span>
+      <span class="swatch swatch-gold"><b>DOURADO</b></span>
+      <span class="swatch swatch-white"><b>BRANCO</b></span>
+      <span class="swatch swatch-black"><b>PRETO</b></span>
+    </div>
+  </div>
+ </div>
+</section>
+
+<section id="avaliacoes">
+ <div class="container">
+  <div class="section-head reveal">
+    <div><div class="kicker">Comentários</div><h2>O que nossos clientes dizem.</h2></div>
+    <p>Compartilhe sua experiência com a GRK3D PRINT.</p>
+  </div>
+
+  <div class="comment-layout">
+   <div class="comment-form reveal">
+    <div class="comment-form-title">Adicionar comentário</div>
+    <form id="commentForm">
+      <div class="form-grid">
+       <label>Nome<input id="commentName" required maxlength="50" placeholder="Seu nome"></label>
+       <label>Avaliação<select id="commentRating">
+        <option value="5">★★★★★ — Excelente</option>
+        <option value="4">★★★★☆ — Muito bom</option>
+        <option value="3">★★★☆☆ — Bom</option>
+        <option value="2">★★☆☆☆ — Regular</option>
+        <option value="1">★☆☆☆☆ — Precisa melhorar</option>
+       </select></label>
+      </div>
+      <label>Comentário<textarea id="commentText" required maxlength="500" placeholder="Conte como foi sua experiência..."></textarea></label>
+      <button class="btn btn-primary" type="submit">PUBLICAR COMENTÁRIO</button>
+    </form>
+   </div>
+
+   <div class="comments-feed" id="commentsFeed" aria-live="polite"></div>
+  </div>
+
+  <div class="suggestion reveal">
+   <div><div class="kicker">Sua ideia importa</div><h3>Tem uma sugestão?</h3><p>Envie uma ideia, melhoria ou sugestão diretamente para nosso e-mail.</p></div>
+   <a class="btn btn-outline" href="mailto:guercheski3d@gmail.com?subject=Sugestão%20para%20a%20GRK3D%20PRINT&body=Olá!%20Gostaria%20de%20enviar%20uma%20sugestão:%0A%0A">ENVIAR SUGESTÃO</a>
+  </div>
+ </div>
+</section>
+
+<section class="contact" id="contato">
+ <div class="container contact-grid">
+  <div class="reveal">
+   <div class="kicker">Contato ✶</div><h2>Vamos transformar sua ideia em realidade?</h2>
+   <div class="contact-list">
+    <a class="whatsapp-final" href="https://wa.me/5541997370838" target="_blank" rel="noopener">◉ <span><b>WhatsApp</b><br>(41) 99737-0838<br><small>Fazer pedido pelo WhatsApp →</small></span></a>
+    <a href="https://instagram.com/GRK3D.print" target="_blank">◎ <span><b>Instagram</b><br>@GRK3D.print</span></a>
+    <a href="mailto:guercheski3d@gmail.com">✉ <span><b>E-mail</b><br>guercheski3d@gmail.com</span></a>
+    <div>⌖ <span><b>Localização</b><br>Araucária – PR<br>Entregas em Araucária e região de Curitiba.</span></div>
+   </div>
+  </div>
+  <div class="imagine-block reveal" id="personalizados">
+   <div class="kicker">GRK3D PRINT ✶</div>
+   <h2>Você imagina.<br>A gente cria.</h2>
+   <p>Da sua ideia ao objeto final: transformamos referências, necessidades e projetos em peças personalizadas.</p>
+  </div>
+  <form class="form reveal" id="budgetForm">
+   <div class="form-grid"><label>Nome<input name="nome" required placeholder="Seu nome"></label><label>E-mail<input name="email" type="email" required placeholder="voce@email.com"></label></div>
+   <div class="form-grid"><label>WhatsApp<input name="whatsapp" placeholder="(41) 99999-9999"></label><label>Tipo de peça<select name="tipo"><option>Chaveiro</option><option>Miniatura</option><option>Item religioso</option><option>Personalizado</option><option>Outro</option></select></label></div>
+   <label>Descrição do projeto<textarea name="descricao" required placeholder="Conte um pouco sobre sua ideia..."></textarea></label>
+   <label>Referência / imagem<input name="referencia" type="file" accept="image/*"></label>
+   <button class="btn btn-primary" type="submit">ENVIAR PEDIDO</button>
+   <small style="color:#68706b">Se você anexar uma imagem, o celular vai abrir o menu de compartilhar para você escolher o WhatsApp e enviar a foto junto com o pedido. Em computadores ou navegadores sem esse recurso, o pedido abre no WhatsApp só com o texto — aí é só enviar a foto por lá.</small>
+  </form>
+ </div>
+</section>
+</main>
+
+<footer>
+ <div class="container footer-grid">
+  <div><strong>GRK3D PRINT <span style="color:var(--red)">✶</span></strong><br><small>Sua ideia. Nossa impressão.<br>Araucária – PR | Atendemos Araucária e região de Curitiba.</small></div>
+  <div class="footer-links"><a href="#inicio">Início</a><a href="#sobre">Sobre</a><a href="#portfolio">Portfólio</a><a href="#personalizados">Personalizados</a><a href="#avaliacoes">Avaliações</a><a href="#contato">Contato</a></div>
+ </div>
+</footer>
+<div class="toast" id="toast"></div>
+
+<script src="js/supabase-config.js" defer></script>
+<script src="js/main.js" defer></script>
+</body>
+</html>
